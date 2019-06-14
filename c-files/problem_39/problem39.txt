@@ -1,0 +1,57 @@
+========================
+Integer right triangles
+========================
+
+Problem 39
+
+If p is the perimeter of a right angle triangle with integral length sides, {a,b,c}, there are
+exactly three solutions for p = 120.
+
+{20,48,52}, {24,45,51}, {30,40,50}
+
+For which value of p ² 1000, is the number of solutions maximised?
+
+==========================================================================
+Questions
+==========================================================================
+
+Can the numbers be positive or negative? No, only positive
+
+What is the range of the perimeter? From 1 to 1000.
+
+Do you know a similar problem or a formula that might help? Yes, the formula c^2 = a^2 + b^2.
+
+How do you calculate all the posible combinations? With two loops, one for a and another for b.
+
+What would be the upper bound? The perimeter divided by 2 would be the upper bound.
+
+is there any assumption? Yes, there are not two perimeters with equal maximum number of solutions.
+
+==========
+Algorithm
+==========
+Create and array of pointers to linked list.
+Define two nested loops from 1 to perimeter/2.
+In the inner loop check if the value sqrt(a^2 + b^2) gives and exact positive number and if it's
+less or equal to 1000. If this is true, add three values to the list, otherwise, continue iterating. 
+
+===============================
+Running time of the algorithm
+===============================
+
+========
+Answer
+========
+
+For which value of p ² 1000, is the number of solutions maximised?
+List size 8
+{240, 252, 348} = 840
+{210, 280, 350} = 840
+{168, 315, 357} = 840
+{140, 336, 364} = 840
+{120, 350, 370} = 840
+{105, 360, 375} = 840
+{56, 390, 394} = 840
+{40, 399, 401} = 840
+
+

@@ -1,0 +1,62 @@
+====================
+Digit fifth powers
+====================
+
+Problem 30
+
+Surprisingly there are only three numbers that can be written as the sum of fourth powers of their digits:
+
+1634 = 1^4 + 6^4 + 3^4 + 4^4
+8208 = 8^4 + 2^4 + 0^4 + 8^4
+9474 = 9^4 + 4^4 + 7^4 + 4^4
+
+As 1 = 1^4 is not a sum it is not included.
+
+The sum of these numbers is 1634 + 8208 + 9474 = 19316.
+
+Find the sum of all the numbers that can be written as the sum of fifth powers of their digits.
+
+==========================================================================
+Questions
+==========================================================================
+
+Can the numbers be positive or negative? No, only positive.
+
+What is the range of the numbers? 10000 to 99999
+
+What are the operations that are repeated over and over again? The calculation of the powers
+of 0, 1, 2, 3, 4, 5, 6, 7, 8, 9.
+
+Any concerns? Does the sum fit in a 64 bits integer? Unknown
+
+How to determine the upperbound?
+
+Can you devise a plan?
+The first step is to create an array that will keep the calculations of the powers for each number.
+Next, iterate from 10000 to 99999 and extract each number and get the value of the power from the array,
+then sum these numbers and check if we get the number that is being analized. If yes, sum that number
+to the total, otherwise, continue.
+
+Note:
+The numbers related to this problem are called Narcissistic Number. It's necessary to calculate an
+upper bound, so we use this fact:
+
+The number of narcissistic numbers in a given base is finite, since the maximum possible sum
+of the kth powers of a k digit number in base b is k(b-1)^k, so k(b-1)^k is the upperbound.
+
+
+=============================== 
+Running time of the algorithm
+===============================
+
+The running time of the algorithm is O (m x n) where:
+
+  m = Limit of the Narcissistic Number
+  n = the length of the Narcissistic Number.
+
+========
+Answer
+========
+The sum of all the numbers that can be written as the sum of fifth powers of their digits is: 443839
+
+

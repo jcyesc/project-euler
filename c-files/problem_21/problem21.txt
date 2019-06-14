@@ -1,0 +1,69 @@
+====================
+Problem
+====================
+
+Amicable numbers
+Problem 21
+Let d(n) be defined as the sum of proper divisors of n (numbers less than n which
+divide evenly into n).
+
+If d(a) = b and d(b) = a, where a ­ b, then a and b are an amicable pair and each of a and b
+are called amicable numbers.
+
+For example, the proper divisors of 220 are 1, 2, 4, 5, 10, 11, 20, 22, 44, 55 and 110;
+therefore d(220) = 284. The proper divisors of 284 are 1, 2, 4, 71 and 142; so d(284) = 220.
+
+Evaluate the sum of all the amicable numbers under 10000.
+
+
+==========================================================================
+Questions
+==========================================================================
+
+Can the numbers be positive or negative? No, only positive
+
+What is the range of the numbers? From 1 to 1000
+
+Can a prime number be amicable? No, d(13) = 1, d(1) = undefined, because we are not taking
+into account negative numbers.
+
+is it usefult to know that? Yes, we can create the Sieve of Eratosthenes till 10000 and avoid
+trying to get the divisors of a prime number because we know that is not amicable.
+
+Can we parallelize the algorithm? Yes, we can calculate first one part, and then the other.
+
+
+==========
+Algorithm
+==========
+1. Create a Sieve of Eratosthenes of size 10000.
+2. Iterate from 1 to 10000
+- If the number is prime, continue
+- If not prime, then get the proper divisors for that number and add them, then, get the proper
+  divisors of the result of the sum and add them. If the number that is currently being processed
+  is equal to the second sum, then is an amicable number and should be added to the great total.
+
+===============================
+Running time of the algorithm
+===============================
+The running time is O (n ^ 2).
+
+========
+Answer
+========
+
+Amicable numbers
+
+Amicable: 220
+Amicable: 284
+Amicable: 1184
+Amicable: 1210
+Amicable: 2620
+Amicable: 2924
+Amicable: 5020
+Amicable: 5564
+Amicable: 6232
+Amicable: 6368
+
+The sum of all the amicable numbers under 10000 is : 31626
+

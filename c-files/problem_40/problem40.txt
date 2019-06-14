@@ -1,0 +1,48 @@
+
+==========================
+Champernowne's constant
+========================
+
+Problem 40
+An irrational decimal fraction is created by concatenating the positive integers:
+
+0.123456789101112131415161718192021...
+
+It can be seen that the 12th digit of the fractional part is 1.
+
+If dn represents the nth digit of the fractional part, find the value of the following expression.
+
+d1 x d10 x d100 x d1000 x d10000 x d100000 x d1000000
+
+
+==========================================================================
+Questions
+==========================================================================
+
+What is the range of the numbers? From 1 to less than 1000000;
+
+Can the numbers be positive or negative? No, only positive.
+
+Can you devise a plan? Yes
+
+Do you require a long string? It might or might not.
+If it's decided to concatenate the numbers and the get the values of the number in the respective
+indexes (1, 10, 100, ...), then we require the string.
+If we count the characters as we continue iterating and select the numbers as we go, we don't
+require an extra string. The tradeoff of this approach is that it might be a little bit complicated.
+
+
+===============================
+Running time of the algorithm
+===============================
+
+The running time of the algorithm is O(n * m) where n is the number of elements in the array
+and m is the size of the string, which reach the size of n, them m = n^2 or n!.
+
+========
+Answer
+========
+The value of the expression is 210
+
+
+

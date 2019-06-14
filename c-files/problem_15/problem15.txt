@@ -1,0 +1,29 @@
+===================
+Lattice paths
+====================
+
+Problem 15
+Starting in the top left corner of a 2x2 grid, and only being able to move to the right and down,
+there are exactly 6 routes to the bottom right corner.
+
+      See image in folder.
+
+How many such routes are there through a 20x20 grid?
+
+
+==========================================================================
+Questions
+==========================================================================
+
+==========
+Algorithm
+==========
+
+===============================
+Running time of the algorithm
+===============================
+
+========
+Answer
+========
+With a 20 X 20 matriz we have 137,846,528,820.00 different paths

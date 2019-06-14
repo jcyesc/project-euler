@@ -1,0 +1,43 @@
+===================
+10001st prime
+====================
+
+By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13,
+we can see that the 6th prime is 13.
+
+What is the 10 001st prime number?
+
+==========================================================================
+Questions
+==========================================================================
+
+What is the range of the numbers? It's unknown. We don't know where the 10,001 prime number will be.
+
+Can the numbers be positive and negative? No, only positive
+
+Is there a formula to calculate the prime numbers? No
+
+What are the known methods for calculating prime numbers?
+Sieve of Eratostenes
+Check if the previous numbers divide the number that is being tested.
+
+What are the drawbacks if you use  the Sieve of Eratostenes?
+It's required a lot of space, and the array might not hold all the numbers that are required.
+An alternative to arrays is to use bitmaps or an implementation of a BigNumber.
+
+==========
+Algorithm
+==========
+Sieve of Eratostenes
+
+
+===============================
+Running time of the algorithm
+===============================
+O(n ^ 2)
+
+
+========
+Answer
+========
+The prime number 10001 is: 104743 (In this result we are not counting the 1)

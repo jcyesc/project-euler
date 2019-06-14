@@ -1,0 +1,76 @@
+=============================
+Lexicographic permutations
+=============================
+
+Problem 24
+
+A permutation is an ordered arrangement of objects.
+
+For example, 3124 is one possible permutation of the digits 1, 2, 3 and 4. If all of the permutations
+are listed numerically or alphabetically, we call it lexicographic order.
+The lexicographic permutations of 0, 1 and 2 are:
+
+012   021   102   120   201   210
+
+What is the millionth lexicographic permutation of the digits 0, 1, 2, 3, 4, 5, 6, 7, 8 and 9?
+
+==========
+Algorithm
+==========
+
+Permutations of a string
+
+Design an algorithm to print all permutations of a string.
+
+Consider a test string abcdefg
+ 		Case "a"  --> {a}
+ 		Case "ab" --> {ab, ba}
+ 		Case "abc" --> {abc, bac, bca, acb, cab, cba}
+
+This is the first "interesting case" If we had the answer to P("ab"), how could we generate
+P("abc")? Well, the additional letter is "c", so we can just stick c in at every possible point.
+
+We can see that when we add a new letter, we insert that letter into all locations of all
+strings.
+
+Recursion Example
+
+          P(abc) - combine and return list of permutations
+          /    \
+         a     P(bc) - combine and return list of permutations.
+              /    \
+             b    P(c) - return list of permutations
+
+ALGORITHM
+
+ PERMUTATE(s)
+   if s.length == 0
+   	return []
+
+   if s.length == 1
+   	return [s]
+
+   s1 = get first character of s
+   s2 = get the remaining of s
+
+   list = PERMUTATE(s2)
+
+Insert s1 into  all locations of all strings in the list and add all this new
+permutations to the result.
+
+===============================
+Running time of the algorithm
+===============================
+
+
+The running time of the algorithm is:
+
+  T(n) = T(n-1) + n ^ 2
+  T(n) = n ^ 4
+
+Where T(n -) is the recursive call to PERMUTATE
+
+========
+Answer
+========
+Element: 2783915460

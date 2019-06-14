@@ -1,0 +1,46 @@
+===================
+Largest palindrome product
+====================
+
+Problem 4
+
+A palindromic number reads the same both ways. The largest palindrome made 
+from the product of two 2-digit numbers is 9009 = 91 x 99.
+
+Find the largest palindrome made from the product of two 3-digit numbers.
+
+
+==========================================================================
+Questions
+==========================================================================
+
+Can the numbers be positive or negative? No, only positive.
+
+What is the range of the 3-digit numbers? 100 to 999
+
+Can you devise a plan?
+Brute Force
+Make all the posible multiplications from 100 to 999 and for each result check
+if it's a palindromic number or not. The running time of the algorithm is O(n^2).
+
+Elegant solution
+Iterate from 999 * 999 to 100 * 100 and check if the result is palindromic number or not. If it's
+a palindromic number, get the multiples of the number and print when the number of multiples is two
+and they have 3 digits.
+
+Note:
+The implementation of this solution find the numbers manually.
+In this case the brute force algorithm works better.
+
+==========
+Algorithm
+==========
+
+===============================
+Running time of the algorithm
+===============================
+
+========
+Answer
+========
+Multiples of 906609: 3 11 83 331

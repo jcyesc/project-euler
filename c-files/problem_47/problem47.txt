@@ -1,0 +1,66 @@
+====================
+Distinct primes factors
+====================
+
+Problem 47
+
+The first two consecutive numbers to have two distinct prime factors are:
+
+14 = 2 x 7
+15 = 3 x 5
+
+The first three consecutive numbers to have three distinct prime factors are:
+
+644 = 2 ^ 2 x 7 x 23
+645 = 3 x 5 x 43
+646 = 2 x 17 x 19.
+
+Find the first four consecutive integers to have four distinct prime factors.
+What is the first of these numbers?
+
+==========================================================================
+Questions
+==========================================================================
+
+Can the numbers be positive or negative? No, only positive
+
+What is the range of the numbers that are going to be searched? 1 to unknown.
+
+How are the factors going to be found?
+First, find the divisor of the number, and then divide the number by that divisor. Example
+	20 is the number
+	2 is the first divisor.
+	20 / 2 = 10
+	First divisor of 10 is 2
+	10 / 2	= 5
+	First divisor of 5 is 5
+	
+	The divisors of 20 are 2, 2, 5.
+
+==========
+Algorithm
+==========
+
+Start iterating from 1 till the given sequence is found.
+Get all the prime factors for the current number.
+Eliminate duplicates of the list of divisors by multiplying similar terms.
+If the size of the list is four, analize the next two numbers.
+    - If they have different prime factors, the sequence has been found
+    - If not, continue with the next number
+If false, continue with the next element.
+
+===============================
+Running time of the algorithm
+===============================
+The running time of the algorithm is O(n ^ 3).
+
+========
+Answer
+========
+Distinct primes factors
+First number of the sequence: 134043
+3 7 13 491 
+4 23 31 47 
+5 17 19 83 
+2 9 11 677 
+

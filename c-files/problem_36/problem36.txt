@@ -1,0 +1,49 @@
+====================
+Double-base palindromes
+====================
+
+Problem 36
+The decimal number, 585 = 10010010012 (binary), is palindromic in both bases.
+
+Find the sum of all numbers, less than one million, which are palindromic in base 10 and base 2.
+
+(Please note that the palindromic number, in either base, may not include leading zeros.)
+
+==========================================================================
+Questions
+==========================================================================
+
+Can the numbers be positive or negative? No, only positive.
+
+What is the range of the numbers? From 1 to one million.
+
+What is the most appropriate data type? an int will be good fit.
+
+Can you devise a plan? Yes
+
+Have you seen a similar problem? Yes. The problem consisted in finding all the palindromic numbers
+from 1  to one million.
+
+is there any concerns? The function that tests if a number is palindromic or not has to be
+highly efficient because will be used a lot of times.
+
+==========
+Algorithm
+==========
+
+Iterate through all numbers. For each number check if it's palindromic or not.
+If it's palindromic, convert the number to base 2 and check if it's palindromic or not. If it's
+palindromic in base 10 and 2, then sum it, otherwise continue.
+ 
+
+===============================
+Running time of the algorithm
+===============================
+
+The running time of the algorithm is O(n * m) where n is the number of numbers and m is the length
+of each number.
+
+========
+Answer
+========
+Sum of all numbers that are palindromic in base 10 and 2: 872187

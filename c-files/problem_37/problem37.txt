@@ -1,0 +1,63 @@
+====================
+Truncatable primes
+====================
+
+Problem 37
+The number 3797 has an interesting property. Being prime itself, it is possible to continuously
+remove digits from left to right, and remain prime at each stage: 3797, 797, 97, and 7. Similarly
+we can work from right to left: 3797, 379, 37, and 3.
+
+Find the sum of the only eleven primes that are both truncatable from left to right and right
+to left.
+
+NOTE: 2, 3, 5, and 7 are not considered to be truncatable primes.
+
+==========================================================================
+Questions
+==========================================================================
+
+Can the numbers be positive or negative?
+
+What is the range of the numbers? From 10 to unknonw
+
+How do you know if a number is prime or not? There are several approaches, the first one is
+trying to find if the number has more divisors apart from 1 and itself, if it has, then it's not
+prime, otherwise it's prime.
+The second approach is to build the sieve of eratosthenes.
+
+Can you devise a plan?
+
+==========
+Algorithm
+==========
+
+Create the Sieve of Eratosthenes with size 1000000 and see if eleven truncable primes can be found
+below 1000000. If no, increase the size of the Sieve.
+Iterate from 10 to 1000000 and if the number is prime, see it's truncable prime or not. If's
+truncable prime, sum than number and increase the counter of truncable primes. Do this till
+the 11 truncable primes have been found.
+
+
+===============================
+Running time of the algorithm
+===============================
+The running time of the algorithm is O (n x m) where n is the maximum truncable prime and m is
+the length of the maximum truncable prime.
+
+
+========
+Answer
+========
+Truncatable prime: 23
+Truncatable prime: 37
+Truncatable prime: 53
+Truncatable prime: 73
+Truncatable prime: 313
+Truncatable prime: 317
+Truncatable prime: 373
+Truncatable prime: 797
+Truncatable prime: 3137
+Truncatable prime: 3797
+Truncatable prime: 739397
+The sum of the only element primes that are bothtruncatable from left to right and right to left is: 748317
+

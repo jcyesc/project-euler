@@ -1,0 +1,46 @@
+====================
+Circular primes
+====================
+
+Problem 35
+The number, 197, is called a circular prime because all rotations of the digits:
+197, 971, and 719, are themselves prime.
+
+There are thirteen such primes below 100: 2, 3, 5, 7, 11, 13, 17, 31, 37, 71, 73, 79, and 97.
+
+How many circular primes are there below one million?
+
+==========================================================================
+Questions
+==========================================================================
+
+Can the numbers be positive or negative? No, only positive
+
+How can you calculate the prime numbers? Use the Sieve of Eratosthenes.
+
+What is the range of the numbers? 1 to one million.
+
+What happens if there is a lot of data? Where does the data come from?
+
+Can you devise a plan? Yes
+First, calculate the Sieve of Erathostenes from 1 to one million.
+Create a hash table.
+Iterate all the Sieve and if it's a prime number check if the prime number is in the hash table,
+if not, rotate the number and check if the rotations are prime numbers, if yes, put in the hash table,
+otherwise continue.
+Print the size of the hash.
+
+===============================
+Running time of the algorithm
+===============================
+The running time of the algorithm is O (m x n) where:
+   m is the number of elements (1000000 numbers)
+   n is the maximum length of the number (it's used in the rotations)
+
+========
+Answer
+========
+The number of circular primes below one million is 55
+
+
+

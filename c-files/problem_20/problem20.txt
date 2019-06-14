@@ -1,0 +1,38 @@
+===================
+Factorial digit sum
+====================
+
+Problem 20
+n! means n x (n - 1) x ... x 3 x 2 x 1
+
+For example, 10! = 10 x 9 x ... x 3 x 2 x 1 = 3628800,
+and the sum of the digits in the number 10! is 3 + 6 + 2 + 8 + 8 + 0 + 0 = 27.
+
+Find the sum of the digits in the number 100!
+
+==========================================================================
+Questions
+==========================================================================
+
+Can the numbers be positive and negative? No, only positive
+
+Can the result of the factorial fit in long int (64 bits)? No
+
+Is necessary to use a BigInteger? Yes
+
+Can we parallelized the calculations? Yes
+
+
+==========
+Algorithm
+==========
+
+===============================
+Running time of the algorithm
+===============================
+
+========
+Answer
+========
+The factorial of 100 is 93326215443944152681699238856266700490715968264381621468592963895217599993229915608941463976156518286253697920827223758251185210916864000000000000000000000000
+Tsum of the digits in the number 100!: 648

@@ -1,0 +1,51 @@
+===================
+Sum square difference
+====================
+
+The sum of the squares of the first ten natural numbers is,
+
+1^2 + 2^2 + ... + 10^2 = 385
+
+The square of the sum of the first ten natural numbers is,
+
+(1 + 2 + ... + 10)2 = 552 = 3025
+Hence the difference between the sum of the squares of the first ten natural numbers and the
+square of the sum is 3025 - 385 = 2640.
+
+Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
+
+==========================================================================
+Questions
+==========================================================================
+
+What is the range of the numbers? 1 to 100^2
+
+Can the numbers be positive and negative? No, only positive
+
+Can we parallelalize the problem? Yes
+
+Does the maximum number fits in a 64 bits integer? Yes 
+
+==========
+Algorithm
+==========
+Basically, one loops is needed to calculate the sum of the squares and the square of the sum
+of the natural numbers. Inside the loop the square of the number will be calculated and added, also,
+the number that is being processed will be added so at the end of the loop this number will be multiply
+by itselt.
+
+Once these two values are calculated, they are substracted. 
+
+===============================
+Running time of the algorithm
+===============================
+The running time of the algoritm is O(n).
+
+========
+Answer
+========
+Sum of squares of the 100 natural numbers is: 338350
+Square of the sum of the 100 natural numbers is: 25502500
+Difference between the sum of the squares of the 100 natural numbers
+and the square of the sum = 25164150
+

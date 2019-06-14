@@ -1,0 +1,39 @@
+=======================
+Multiples of 3 and 5
+=======================
+
+If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9.
+
+The sum of these multiples is 23.
+
+Find the sum of all the multiples of 3 or 5 below 1000.
+
+=====================================================================================
+Questions
+=====================================================================================
+
+Can the numbers be positive and negative? No
+
+What is the range of the numbers? 0 to 1000
+
+Can you devise a plan?
+Iterate through all the elements and check if a number is multiple of 3 and 5, if it's multiple,
+add, otherwise continue.
+
+Another option would be to iterate twice. First with steps of 3 and put the multiples in a map, then
+with steps of 5 and put the multiples in a map, after this, sum all the elements in the map.
+
+What is the running time of the program?
+O(n)
+
+Can you parallelize the program? Yes, you can divide the range of the numbers and calculate
+the different sums.
+
+How are the numbers given? How are we going to access to these numbers?
+File, list, map or database.
+
+==============
+Answer
+==============
+Result: 233168
+

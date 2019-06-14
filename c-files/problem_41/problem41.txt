@@ -1,0 +1,61 @@
+====================
+Pandigital prime
+====================
+
+Problem 41
+We shall say that an n-digit number is pandigital if it makes use of all the digits 1 to n
+exactly once. For example, 2143 is a 4-digit pandigital and is also prime.
+
+What is the largest n-digit pandigital prime that exists?
+
+==========================================================================
+Questions
+==========================================================================
+
+Can the numbers be positive or negative? No, the number can be only positive.
+
+How can you calculate if a number is pandigital prime or not?
+
+Approach 1
+------------
+First, check the length of the
+number, and then try to find the number from 1 to length in the number, if the numbers were
+found, then it's pandigital.
+
+How can you approach the problem? There are several approaches, first, we might take 9 different
+digits and permutate them and check if there is a prime number, keep track which one is the
+largest.
+If not prime number was found, then try with 8 different digits and so on, till you find
+the largest n-digit pandigital prime.
+
+Approach 2
+------------
+Calculate all the prime numbers from 1 to 98754321 and check from the largest to the smaller
+if it's pandigital or not.
+
+
+Which one is better? Which one requires less calculations? Which one requires less comparisons?
+
+
+Conclusion
+-----------
+The second approach is more efficient because either way, we need to create the Sieve of Erathostenes
+to check if the number is prime or not.
+
+==========
+Algorithm
+==========
+
+===============================
+Running time of the algorithm
+===============================
+
+The running time of the algorithm is O(n * m) where n is the largest pandigital number (987654321)
+and m is the length of that number.
+
+========
+Answer
+========
+
+The largest n-digit pandigital prime that exists is 7652413
+

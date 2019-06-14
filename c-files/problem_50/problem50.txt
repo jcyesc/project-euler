@@ -1,0 +1,48 @@
+====================
+Consecutive prime sum
+====================
+Problem 50
+
+The prime 41, can be written as the sum of six consecutive primes:
+
+41 = 2 + 3 + 5 + 7 + 11 + 13
+This is the longest sum of consecutive primes that adds to a prime below one-hundred.
+
+The longest sum of consecutive primes below one-thousand that adds to a prime,
+contains 21 terms, and is equal to 953.
+
+Which prime, below one-million, can be written as the sum of the most consecutive primes?
+
+==========================================================================
+Questions
+==========================================================================
+
+Can the numbers be positive or negative? No, only positive
+
+What is the range of the numbers? 1 to 1000000
+
+How will the prime numbers be generated? The sieve of erathostenes will be used.
+
+==========
+Algorithm
+==========
+Generate all the prime numbers below 1,000,000.
+Select the greatest prime number
+Start adding the consecutive primes from the smallest to the biggest till we reach the number that
+we select. If the number is not found, continue this iteration with the next small number and so on.
+If the sum of consecutive primes doesn't add to the greatest prime number, select the next
+greatest number to the left.
+
+The previous algorithm was modified for one that is most efficient. The algorithm is in problem50.c.
+
+===============================
+Running time of the algorithm
+===============================
+
+O (n ^ 2)
+
+========
+Answer
+========
+
+Prime Number 997651, sequence size 543

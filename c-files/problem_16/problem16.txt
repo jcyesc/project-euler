@@ -1,0 +1,38 @@
+===================
+Power digit sum
+====================
+Problem 16
+
+2^15 = 32768 and the sum of its digits is 3 + 2 + 7 + 6 + 8 = 26.
+
+What is the sum of the digits of the number 2^1000?
+
+==========================================================================
+Questions
+==========================================================================
+Can the numbers be positive and negative? No, only positive.
+
+What is the maximum number? Unknown.
+
+Does the result of the expression 2^1000 fit in native data type? No
+
+Can we reuse some of the functionality used before?
+Yes, we can reuse the Biginteger implementation.
+
+
+==========
+Algorithm
+==========
+
+===============================
+Running time of the algorithm
+===============================
+It runs in m x n being m the base and n the exponent.
+
+
+========
+Answer
+========
+The result of 2 ^ 1000 is:  10715086071862673209484250490600018105614048117055336074437503883703510511249361224931983788156958581275946729175531468251871452856923140435984577574698574803934567774824230985421074605062371141877954182153046474983581941267398767559165543946077062914571196477686542167660429831652624386837205668069376
+The sum of the digits of the number 2 ^ 1000 is: 1366
+

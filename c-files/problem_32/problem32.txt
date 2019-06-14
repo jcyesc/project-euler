@@ -1,0 +1,55 @@
+====================
+Pandigital products
+====================
+
+Problem 32
+We shall say that an n-digit number is pandigital if it makes use of all the digits 1 to n exactly
+once; for example, the 5-digit number, 15234, is 1 through 5 pandigital.
+
+The product 7254 is unusual, as the identity, 39 x 186 = 7254, containing multiplicand, multiplier,
+and product is 1 through 9 pandigital.
+
+Find the sum of all products whose multiplicand/multiplier/product identity can be written as a 1
+through 9 pandigital.
+
+HINT: Some products can be obtained in more than one way so be sure to only include it once in
+your sum.
+
+==========================================================================
+Questions
+==========================================================================
+
+What is the range of the numbers? The maximum total of numbers that we have is 9. If I multiply
+1 by 9999 I got = 9999 and the multiplicand/multiplier/product is 9 digits long. So the range
+goes from 1 to 9999.
+
+Can the numbers be positive or negative? No, only positive.
+
+Can you devise a plan? The first one is to get all the posible permutations of 9 numbers (1 to 9)
+and start selecting numbers of that permutation to see which number might be multiplied so we get
+the numbers in the right.
+
+Another approach is to have two nested loops and check if the numbers are pandigital or not.
+
+How can you check if a number is pandigital or not? First, you can create an array of nine elements
+and for each digit store 1 in the appropriate index, if you try to store 1 in an element that
+already have one, the is not pandigital.
+
+===============================
+Running time of the algorithm
+===============================
+
+The running time of the algorithm is O(n^2) where n is the limit of the number.
+
+========
+Answer
+========
+Pandigital products
+4 x 1738 = 6952
+4 x 1963 = 7852
+12 x 483 = 5796
+18 x 297 = 5346
+28 x 157 = 4396
+39 x 186 = 7254
+48 x 159 = 7632
+The sum of all products whose multiplicand/multiplier/product identiycan be written as a 1 through 9 panditial is 45228

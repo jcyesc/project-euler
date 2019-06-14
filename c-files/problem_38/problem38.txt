@@ -1,0 +1,90 @@
+=========================
+Pandigital multiples
+=========================
+
+Problem 38
+
+Take the number 192 and multiply it by each of 1, 2, and 3:
+
+192 x 1 = 192
+192 x 2 = 384
+192 x 3 = 576
+
+By concatenating each product we get the 1 to 9 pandigital, 192384576.
+We will call 192384576 the concatenated product of 192 and (1,2,3)
+
+The same can be achieved by starting with 9 and multiplying by 1, 2, 3, 4, and 5, giving the
+pandigital, 918273645, which is the concatenated product of 9 and (1,2,3,4,5).
+
+What is the largest 1 to 9 pandigital 9-digit number that can be formed as the concatenated
+product of an integer with (1,2, ... , n) where n > 1?
+
+==========================================================================
+Questions
+==========================================================================
+
+What is the range of the numbers? It depends on the result of the multiplications. After
+concatenating the results, the pandigital number has to be 9-digits.
+
+Now, we need to take into account that we need to find the largest pandigital 9-digit number
+that can be formed as the concatenated product of an integer.
+
+So the number has to start with 9. The possible values migt be 9, 90 and 900.
+
+If we start trying with the 90:
+
+90 x 1 = 90
+90 x 2 = 189
+90 * 2 = 270
+
+It turns out that the concatenation of these numbers is either less than 9 or greater than 9.
+
+If we try with 900:
+
+900 x 1 = 900
+900 x 2 = 1800
+900 x 3 = 2700
+
+The concatenation of these numbers is either less than 9 or greater than 9.
+
+If we try with 9000:
+
+9000 x 1 = 9000
+9000 x 2 = 18000
+
+This gives us a 9 digit number so we can assume that the pandigital 9-digit number can be 
+formed by multiplying 9xxx with 1, 2, 3, ...
+
+If we try with 90000:
+
+90000 x 1 = 90000
+90000 x 2 = 180000
+
+The concatenation of these numbers is either less than 9 or greater than 9.
+
+==========
+Algorithm
+==========
+
+Iterate from 9000 to 9999 and have an inner loop that goes from 1 to 100.
+Inside the inner loop check if the concatenate string is equal than 9, if it's equal,
+check if it's pandigital and print it. If it's longer than 9, break the inner loop.
+
+
+===============================
+Running time of the algorithm
+===============================
+
+The running time of the algorithm is O(n x m) where n is range of number 9999 - 9999 and m is the
+number of multipliers, in this case 10.
+
+========
+Answer
+========
+Pandigital multiples
+926718534
+927318546
+932718654
+
+The greatest pandigital number is 932718654
+

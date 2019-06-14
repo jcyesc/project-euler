@@ -1,0 +1,33 @@
+======================
+Largest prime factor
+======================
+
+Problem 3
+The prime factors of 13195 are 5, 7, 13 and 29.
+
+What is the largest prime factor of the number 600851475143?
+
+==========================================================================
+Questions
+==========================================================================
+
+Can the numbers be positive or negative? No, just positive
+
+What is the range of the numbers? 0 to 600851475143
+
+Can you devise a plan?
+The number can be broken down into its prime numbers.
+Example:
+	120
+	2 * 60
+		2 * 30
+			2 * 15
+				3 * 5
+
+What is the running time?
+O(n * n)
+
+The multiples of 600851475143 are:
+71 839 1471 6857 
+				
+				
